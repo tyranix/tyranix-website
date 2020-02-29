@@ -1,0 +1,50 @@
+<!DOCTYPE html5>
+<head>
+    <!--meta-->
+    <meta charset="utf-8"/>
+    <!--styles-->
+    <link rel="stylesheet" href="/styles/common.css"/>
+    <link rel="stylesheet" href="/styles/pages.css"/>
+    
+    <link rel="stylesheet" href="styles/global.css"/>
+    <link rel="stylesheet" href="styles/topMenu.css"/>
+    <!--libs-->
+        <!--add your external libraries here-->
+    <!--config-->
+    <script src="/scripts/adapters.js"></script>
+	<script src="/scripts/dataSources.js"></script>
+    <script src="/scripts/actions.js"></script>
+    <script src="/config/pagesConfig.js"></script>
+    <script src="/config/config.js"></script>
+    <!--core-->
+	<script src="/scripts/core/utils.js"></script>
+    <script src="/scripts/core/pagesManager.js"></script>
+	<script src="/scripts/core/builder.js"></script>
+    <script src="/scripts/core/apiManager.js"></script>
+    <script src="/scripts/core/wsManager.js"></script>
+	<!--boot-->
+    <script src="/scripts/core/boot.js"></script>
+</head>
+<!-- template, build your base page template here-->
+<body>
+    <div class="topMenu" style="background-image: url(images/streamlabstyranix.png)">
+        <a class="topMenuLogoHref" href="/welcome" title="Acceuil">
+            <img class="topMenuLogo" src="images/logotyranixtransparent.png"/>
+        </a>
+        <div class="topMenuLinks">
+              <a href="/stream" title="stream">
+                Stream
+            </a>
+            <a href="/videos" title="vidéos">
+                 Vidéos
+            </a>
+            <a href="/contact" title="Réseaux Sociaux">
+                Contact
+            </a>
+             <a href="/connection" title="connexion">
+                Connexion
+            </a>
+        </div>
+    </div>
+    <div id="pagesContainer"></div>
+</body>

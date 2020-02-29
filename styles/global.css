@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    margin: 0;
+    background-color: #222;
+    text-align: center;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+.pageContent{
+    font-size: 0;
+    max-width: 1500px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 100px;
+}
+a{
+    color: aqua;
+    text-decoration: none;
+}
+a:hover{
+    color: red;
+    text-decoration: underline;
+    
+}

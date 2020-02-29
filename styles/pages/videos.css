@@ -1,0 +1,60 @@
+.videosPageContainer{
+    padding-bottom: 50px;
+}
+h1 {
+    font-size: 60px;
+    color: white;
+    text-shadow: 5px 5px 30px blue;
+}
+.videotest{
+    display: inline-block;
+    position: relative;
+    box-shadow: 15px 15px 150px red;
+    margin-top: 50px;
+    transition: 2s;
+}
+
+.videotest:hover{
+    box-shadow: 15px 15px 150px blue; 
+}
+
+:root{
+    --videoHeight: 300px;
+    --videoWidth: calc(var(--videoHeight) * 16 / 9);
+}
+.youtubeVideoAdapter{
+    margin-top: 40px;
+}
+.youtubeVideoAdapter:hover{
+    z-index: 1;
+}
+.videoFrame {
+    height: var(--videoHeight);
+    width: var(--videoWidth);
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 0 0 100px rgba(255, 0, 0, 0.678);
+    transition: 1s box-shadow;
+}
+.youtubeVideoAdapter:hover .videoFrame{
+    box-shadow: 0 0 200px blue; 
+}
+
+.videoSideSection {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - var(--videoWidth));
+    text-align: left;
+    padding-left: 20px;
+    color: #ccc;
+}
+.videoTitle {
+    font-size: 40px;
+}
+.youtubeVideoAdapter:hover .videoTitle{
+    text-shadow: 0 0 20px red;
+}
+.videoDescription {
+    font-size: 20px;
+    padding-top: 10px;
+}
