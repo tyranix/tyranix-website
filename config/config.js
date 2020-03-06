@@ -8,7 +8,7 @@ var config = {
     preloadAllViews: false,
     preloadAllCSS: false,
     pagesContainerSelector: "#pagesContainer",
-    pageTitlePrefix: "SPA Framework - ",
+    pageTitlePrefix: "TyranixTV - ",
     pageTitleSuffix: "",
     //text
     messageNoData: "Nothing to show here...",

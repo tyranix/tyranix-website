@@ -1,50 +1,59 @@
 <!DOCTYPE html5>
+
 <head>
     <!--meta-->
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <!--styles-->
-    <link rel="stylesheet" href="/styles/common.css"/>
-    <link rel="stylesheet" href="/styles/pages.css"/>
-    
-    <link rel="stylesheet" href="styles/global.css"/>
-    <link rel="stylesheet" href="styles/topMenu.css"/>
+    <link rel="stylesheet" href="/styles/common.css" />
+    <link rel="stylesheet" href="/styles/pages.css" />
+
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
     <!--libs-->
-        <!--add your external libraries here-->
+    <!--add your external libraries here-->
     <!--config-->
     <script src="/scripts/adapters.js"></script>
-	<script src="/scripts/dataSources.js"></script>
+    <script src="/scripts/dataSources.js"></script>
     <script src="/scripts/actions.js"></script>
     <script src="/config/pagesConfig.js"></script>
     <script src="/config/config.js"></script>
     <!--core-->
-	<script src="/scripts/core/utils.js"></script>
+    <script src="/scripts/core/utils.js"></script>
     <script src="/scripts/core/pagesManager.js"></script>
-	<script src="/scripts/core/builder.js"></script>
+    <script src="/scripts/core/builder.js"></script>
     <script src="/scripts/core/apiManager.js"></script>
     <script src="/scripts/core/wsManager.js"></script>
-	<!--boot-->
+    <!--boot-->
     <script src="/scripts/core/boot.js"></script>
 </head>
 <!-- template, build your base page template here-->
+
 <body>
-    <div class="topMenu" style="background-image: url(images/streamlabstyranix.png)">
+    <header>
         <a class="topMenuLogoHref" href="/welcome" title="Acceuil">
-            <img class="topMenuLogo" src="images/logotyranixtransparent.png"/>
+            <img class="topMenuLogo" src="images/logotyranix_PNG.png" />
         </a>
-        <div class="topMenuLinks">
-              <a href="/stream" title="stream">
+        <p id="pageTitle">...</p>
+        <button id="menuToggler">X</button>
+    </header>
+    <menu>
+        <div class="menuLinks">
+            <a href="/stream" title="stream">
                 Stream
             </a>
             <a href="/videos" title="vidéos">
-                 Vidéos
+                Vidéos
             </a>
             <a href="/contact" title="Réseaux Sociaux">
                 Contact
             </a>
-             <a href="/connection" title="connexion">
+            <a href="/connection" title="connexion">
                 Connexion
             </a>
         </div>
-    </div>
+    </menu>
     <div id="pagesContainer"></div>
+    <footer>
+        Tyranix Productions - 2020
+    </footer>
 </body>

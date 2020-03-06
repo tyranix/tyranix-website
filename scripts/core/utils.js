@@ -9,7 +9,7 @@ Element.prototype.addElement = function (type = "div", attributes = {}) {
             elem[indAttr.substring(1)] = val;
             continue;
         }
-        console.log(indAttr, val);
+        //console.trace(indAttr, val);
         elem.setAttribute(indAttr, val);
     }
     return elem;

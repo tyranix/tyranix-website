@@ -1,3 +1,6 @@
-# Tyranix website
+# SPA Framework
+This is a single page application framework that I initially made for a project in the context of the IT-ES studies.
 
-The tyranixtv.ch website uses my **[spa framework](https://github.com/nicolas-maitre/spa_framework)**
+You can access the wiki  **[here](https://github.com/nicolas-maitre/spa_framework/wiki)**
+
+You can find an example project **[here](https://github.com/nicolas-maitre/spa_framework/tree/example_kaphoot)**

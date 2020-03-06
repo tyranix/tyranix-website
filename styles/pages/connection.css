@@ -1,12 +1,12 @@
-.textInutil{
-    font-size: 35px;
-    color: white;
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    padding-top: 100px;
-}
-
-.topMenuLinks:hover{
-    color: yellow;
+.textInutil{
+    font-size: 35px;
+    color: white;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.topMenuLinks:hover{
+    color: yellow;
 }

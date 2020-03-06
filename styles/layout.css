@@ -1,0 +1,76 @@
+:root {
+    --topMenuHeight: 100px;
+    --menuWidth: 600px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: var(--topMenuHeight);
+    background-color: black;
+    color: white;
+}
+
+.topMenuLogo {
+    display: inline-block;
+    height: var(--topMenuHeight);
+    width: 100px;
+    display: inline-block;
+}
+
+#pageTitle {
+    display: inline-block;
+    vertical-align: top;
+    line-height: var(--topMenuHeight);
+    width: calc(100% - (2 * var(--topMenuHeight)));
+}
+
+#menuToggler {
+    vertical-align: top;
+    display: inline-block;
+    line-height: var(--topMenuHeight);
+    min-height: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 50px;
+    color: white;
+}
+
+menu{
+    width: var(--menuWidth);
+    position: fixed;
+    top: var(--topMenuHeight);
+    right: calc(0 - var(--menuWidth));
+    transition: 500ms right;
+}
+menu.open{
+    right: 0;
+}
+
+menu a {
+    display: inline-block;
+    color: white;
+    line-height: 85px;
+    font-size: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration-line: none;
+}
+
+menu a:hover {
+    color: red;
+    transition: 0.5s;
+}
+
+footer {
+    background-color: #424141;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    line-height: 60px;
+    border-top: 5px solid red;
+}
