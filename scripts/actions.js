@@ -1,3 +1,4 @@
+"use strict"
 function Actions(){
     var _this = this;
     this.onHeadButtonClick = function(evt){
@@ -19,8 +20,17 @@ function Actions(){
     
     //page action on ANY page display
     this.onAnyPageDisplay = function({pageName = false, pageConfig = false}){
-
-    }
+        //title
+        pageTitle.textContent = (pageConfig.pageTitle || "TyranixTV");
+        //menu select
+        document.querySelectorAll("[data-selected-when]").forEach(elem => {
+            if(elem.dataset.selectedWhen == pageName){
+                elem.classList.add("selected");
+            }else{
+                elem.classList.remove("selected");
+            }
+        })
+}
 
     //-------------------------------------------------------------------------------------
     //page actions on data
@@ -45,7 +55,16 @@ function Actions(){
 
     };
     this.onAfterBoot = function () {
-        
+        menuToggler.addEventListener("click", evt => {
+            evt.stopPropagation();
+            document.body.classList.toggle("menu-open");
+        });
+        document.body.addEventListener("click", evt => {
+            document.body.classList.remove("menu-open");
+        });
+        rightMenu.addEventListener("click", evt => {
+            evt.stopPropagation();
+        });
     };
     this.onWebsocketConnection = function () {
         

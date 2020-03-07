@@ -18,7 +18,7 @@ body{
     margin-top: 100px;
 }
 a{
-    color: aqua;
+    color: inherit;
     text-decoration: none;
 }
 a:hover{
@@ -28,9 +28,4 @@ a:hover{
 }
 button{
     cursor: pointer;
-    scale: 1;
-    transition: 200ms scale;
-}
-button:hover{
-    scale: 1.1;
 }

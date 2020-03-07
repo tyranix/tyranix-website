@@ -1,68 +1,136 @@
 :root {
-    --topMenuHeight: 100px;
-    --menuWidth: 600px;
+    --top-menu-height: 100px;
+    --menu-width: 600px;
+    --footer-height: 60px;
+    --red-margins-width: 5px;
+    --menu-item-height: 50px;
+    --menu-tick-size: 20px;
 }
-
+body {
+    padding-top: var(--top-menu-height);
+    padding-bottom: var(--footer-height);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
 header {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    height: var(--topMenuHeight);
+    height: var(--top-menu-height);
     background-color: black;
     color: white;
+    z-index: 30;
+    border-bottom: var(--red-margins-width) solid red;
+}
+header a {
+    text-decoration-line: none !important;
 }
 
 .topMenuLogo {
     display: inline-block;
-    height: var(--topMenuHeight);
+    height: var(--top-menu-height);
     width: 100px;
     display: inline-block;
+    transform: scale(1);
+    transition: 300ms transform;
+}
+.topMenuLogo:hover {
+    transform: scale(1.2);
 }
 
 #pageTitle {
     display: inline-block;
     vertical-align: top;
-    line-height: var(--topMenuHeight);
-    width: calc(100% - (2 * var(--topMenuHeight)));
+    line-height: var(--top-menu-height);
+    width: calc(100% - (2 * var(--top-menu-height)));
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #menuToggler {
     vertical-align: top;
     display: inline-block;
-    line-height: var(--topMenuHeight);
+    line-height: var(--top-menu-height);
     min-height: 0;
     padding: 0;
     background: none;
     border: none;
     font-size: 50px;
     color: white;
+    transform: scale(1);
+    transition: 200ms transform;
+}
+#menuToggler::after{ /*je ferais ça plus tard... */
+    content: "M";
+}
+body.menu-open #menuToggler::after{
+    content: "X";
+}
+#menuToggler:hover {
+    transform: scale(1.1);
 }
 
-menu{
-    width: var(--menuWidth);
+menu {
+    color: white;
+    width: var(--menu-width);
     position: fixed;
-    top: var(--topMenuHeight);
-    right: calc(0 - var(--menuWidth));
-    transition: 500ms right;
+    top: var(--top-menu-height);
+    right: calc(0px - var(--menu-width));
+    box-shadow: 30px 0 30px black;
+    transition: 500ms right, 300ms box-shadow;
+    background-color: #171717;
+    z-index: 10;
+    border-left: var(--red-margins-width) solid red;
+    padding: 0;
+    margin: 0;
+    height: calc(100vh - var(--top-menu-height) - var(--footer-height));
 }
-menu.open{
+body.menu-open menu {
     right: 0;
+    box-shadow: -30px 0 30px black;
+}
+
+.menuHeader {
+    font-size: 50px;
+    line-height: 50px;
+    margin-top: 15px;
 }
 
 menu a {
-    display: inline-block;
-    color: white;
-    line-height: 85px;
+    display: block;
+    line-height: var(--menu-item-height);
+    border-bottom: 3px solid white;
     font-size: 35px;
-    margin-left: 15px;
-    margin-right: 15px;
+    padding-left: 15px;
     text-decoration-line: none;
+    text-align: left;
 }
 
 menu a:hover {
     color: red;
     transition: 0.5s;
+}
+menu a.selected::before {
+    content: "";
+    display: inline-block;
+    background-color: red;
+    height: var(--menu-tick-size);
+    width: var(--menu-tick-size);
+    border-radius: var(--menu-tick-size);
+    vertical-align: middle;
+}
+
+/* pages container */
+#pagesContainer{
+    opacity: 1;
+    transition: 500ms opacity;
+}
+body.menu-open #pagesContainer{
+    opacity: 0.3;
+    pointer-events: none;
 }
 
 footer {
@@ -71,6 +139,37 @@ footer {
     bottom: 0;
     left: 0;
     width: 100%;
-    line-height: 60px;
-    border-top: 5px solid red;
+    line-height: var(--footer-height);
+    border-top: var(--red-margins-width) solid red;
+    color: #ccc;
+    font-size: 22px;
+    z-index: 20;
+}
+
+/* login */
+#twitchLoginBtn {
+    position: absolute;
+    bottom: var(--red-margins-width);
+    right: 0;
+    background-color: #8900b5;
+    color: white;
+    line-height: 100px;
+    font-size: 50px;
+    width: 100%;
+    border: none;
+    transition: 600ms background-color;
+}
+#twitchLoginBtn > img {
+    height: 80px;
+    vertical-align: middle;
+    margin-right: 20px;
+    margin-top: -5px;
+    transform: scale(1);
+    transition: 200ms transform;
+}
+#twitchLoginBtn:hover{
+    background-color: #4d0066;
+}
+#twitchLoginBtn:hover > img{
+    transform: scale(1.2);
 }

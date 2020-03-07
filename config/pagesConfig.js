@@ -6,10 +6,12 @@ var pagesConfig = {
         title: "Welcome"
     },
     stream: {
+        pageTitle: "Stream",
         title: "Stream"
     },
     videos:{
         title: "Vidéos",
+        pageTitle: "Vidéos",
         // refreshDataOnDisplay: true,
         data:{
             source: 'youtubeChannelVideos',
@@ -18,9 +20,7 @@ var pagesConfig = {
         }
     },
     contact:{
+        pageTitle: "Contact",
         title: "Contact"
     },
-    connection:{
-        title: "Connexion"
-    }
 };

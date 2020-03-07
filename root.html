@@ -34,23 +34,25 @@
             <img class="topMenuLogo" src="images/logotyranix_PNG.png" />
         </a>
         <p id="pageTitle">...</p>
-        <button id="menuToggler">X</button>
+        <button id="menuToggler"></button>
     </header>
-    <menu>
-        <div class="menuLinks">
-            <a href="/stream" title="stream">
-                Stream
-            </a>
-            <a href="/videos" title="vidéos">
-                Vidéos
-            </a>
-            <a href="/contact" title="Réseaux Sociaux">
-                Contact
-            </a>
-            <a href="/connection" title="connexion">
-                Connexion
-            </a>
-        </div>
+    <menu id="rightMenu" class="open">
+        <p class="menuHeader">Menu</p>
+        <a href="/welcome" data-selected-when="welcome" title="accueil">
+            Accueil
+        </a>
+        <a href="/stream" data-selected-when="stream" title="stream">
+            Stream
+        </a>
+        <a href="/videos" data-selected-when="videos" title="vidéos">
+            Vidéos
+        </a>
+        <a href="/contact" data-selected-when="contact" title="Réseaux Sociaux">
+            Contact
+        </a>
+        <button id="twitchLoginBtn">
+            <img src="/images/temp_twitch.png"/> Connexion
+        </button>
     </menu>
     <div id="pagesContainer"></div>
     <footer>

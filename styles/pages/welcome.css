@@ -1,3 +1,7 @@
+:root{
+    --mario-bottom-height: calc(var(--footer-height) + var(--top-menu-height));
+    --toyo-bottom-height: calc(var(--mario-bottom-height) + 25px);
+}
 @keyframes titleAnimation{
     from{
         transform: scale(20);
@@ -21,7 +25,7 @@
 
 @keyframes mariiiiio{
     5%{
-        top: calc(100vh - 100px);
+        top: calc(100vh - var(--mario-bottom-height));
         left: -100px;
     }
     40%{
@@ -30,7 +34,7 @@
     }
     44%{
         transform: rotate(-90deg);
-        top: calc(100vh - 100px);
+        top: calc(100vh - var(--mario-bottom-height));
     }
     56%{
         top: 85px;
@@ -50,17 +54,17 @@
     }
     78%{
         transform: rotate(-270deg); 
-        top: calc(100vh - 100px);
+        top: calc(100vh - var(--mario-bottom-height));
     }
     69%{
         transform: rotate(-360deg); 
         left: 0;
-        top: calc(100vh - 100px);
+        top: calc(100vh - var(--mario-bottom-height));
     }
     72%{
         transform: rotate(0deg); 
         left: calc(100vw - 100px);
-        top: calc(100vh - 100px);
+        top: calc(100vh - var(--mario-bottom-height));
     }
     75%{
         transform: rotate(360deg);
@@ -74,12 +78,12 @@
     }
     81%{
         transform: rotate(360deg);
-        top:calc(100vh - 100px);
+        top:calc(100vh - var(--mario-bottom-height));
         left: 0; 
     }
     84%{
         transform: rotate(0deg);
-        top: calc(100vh - 100px);
+        top: calc(100vh - var(--mario-bottom-height));
         left: calc(100vw - 100px); 
     }
     87%{
@@ -95,7 +99,7 @@
 }
 #marioQuality{
     
-    top: calc(100vh - 100px);
+    top: calc(100vh - var(--mario-bottom-height));
     left: -100px; 
     
     position: fixed;
@@ -113,11 +117,11 @@
 
 @keyframes toyooo{
     0%{
-        top: calc(100vh - 125px);
+        top: calc(100vh - var(--toyo-bottom-height));
         left: -150px; 
     }
     5%{
-        top: calc(100vh - 125px);
+        top: calc(100vh - var(--toyo-bottom-height));
         left: 0;
     }
     20%{
@@ -125,7 +129,7 @@
     }
     25%{
         left: -150px;
-        top: calc(100vh - 125px);
+        top: calc(100vh - var(--toyo-bottom-height));
     }
     80%{
         top: 70px;

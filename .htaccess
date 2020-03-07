@@ -4,4 +4,4 @@ DirectoryIndex root.html
 
 RewriteEngine on
 #new pages should be added between the two brackets, separated by a vertical bar (|)
-RewriteRule ^(error|welcome|stream|videos|contact|connection)/* root.html
+RewriteRule ^(error|welcome|stream|videos|contact)/* root.html
