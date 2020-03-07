@@ -5,6 +5,8 @@
     --red-margins-width: 5px;
     --menu-item-height: 50px;
     --menu-tick-size: 20px;
+    --twitch-login-button-height: 100px;
+    --menu-header-height: 50px;
 }
 body {
     padding-top: var(--top-menu-height);
@@ -86,7 +88,7 @@ menu {
     background-color: #171717;
     z-index: 10;
     border-left: var(--red-margins-width) solid red;
-    padding: 0;
+    padding: 15px 0 0 0;
     margin: 0;
     height: calc(100vh - var(--top-menu-height) - var(--footer-height));
     overflow-y: auto;
@@ -98,8 +100,7 @@ body.menu-open menu {
 
 .menuHeader {
     font-size: 50px;
-    line-height: 50px;
-    margin-top: 15px;
+    line-height: var(--menu-header-height);
 }
 
 menu a {
@@ -156,7 +157,7 @@ footer {
     right: 0;
     background-color: #8900b5;
     color: white;
-    line-height: 100px;
+    line-height: var(--twitch-login-button-height);
     font-size: 50px;
     width: 100%;
     border: none;
@@ -179,18 +180,37 @@ footer {
 
 @media only screen and (max-width: 600px) {
     :root {
-        --top-menu-height: 50px;
         --menu-width: 100%;
-        --footer-height: 30px;
-        --red-margins-width: 2px;
-        --menu-item-height: 40px;
         --menu-tick-size: 15px;
     }
     menu {
         border-right: var(--red-margins-width) solid red;
     }
+}
+@media only screen and (max-height: 600px) {
+    :root {
+        --top-menu-height: 50px;
+        --menu-item-height: 40px;
+        --menu-tick-size: 15px;
+        --red-margins-width: 2px
+    }
     #twitchLoginBtn {
         font-size: 10vw;
-        position: relative;
+        position: unset;
+    }
+    footer{
+        position: initial;
+    }
+    .menuLinks {
+        min-height: calc(100% - var(--menu-header-height) - var(--twitch-login-button-height));
+    }
+    menu{
+        height: calc(100vh - var(--top-menu-height));
+    }
+    #pagesContainer{
+        min-height: calc(100vh - var(--top-menu-height) - var(--footer-height));
+    }
+    body{
+        padding-bottom: 0;
     }
 }
