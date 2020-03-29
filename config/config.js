@@ -1,4 +1,6 @@
 var config = {
+    dev_no_internet: false,
+    //
     viewsLocation: "/views",
     pagesCSSLocation:"/styles/pages",
     apiLocation: "https://",
