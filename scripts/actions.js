@@ -8,7 +8,22 @@ function Actions(){
     //page actions on load
     //-------------------------------------------------------------------------------------
     this.onPageLoad = {};
-	  this.onPageLoad.welcome = function(){};
+    this.onPageLoad.welcome = function(){};
+    this.onPageLoad.contact = function(){
+        //images preloader
+        var imagesToPreload = ["youtube.png", "twitch.png", "twitter.png", "instagram.png", "email.png"];
+        imagesToPreload.forEach(img => {
+            fetch(`/images/icons/${img}`);
+        });
+        contactForm.addEventListener("submit", evt => {
+            evt.preventDefault();
+            var email = "contact@tyranixtv.ch";
+            var body = contactMessage.value
+            var subject = `Demande de contact de ${contactName.value}`;
+            var href=`mailto:${email}?${Utils.encodeQuery({subject, body})}`;
+            window.location.href = href;
+        });
+    };
     //-------------------------------------------------------------------------------------
     //page actions on display
     //-------------------------------------------------------------------------------------

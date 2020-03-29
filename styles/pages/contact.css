@@ -1,30 +1,163 @@
-.contactBox{
+:root {
+    --instagram-gradient: linear-gradient(to right, yellow, orange, #ff11af);
+}
+.contactPageContainer {
+    max-width: 1500px;
+    width: 100%;
+    padding-top: 50px;
+}
+#contactForm {
+    width: 50%;
     display: inline-block;
-    margin-top: 75px;
-    margin-left: 25px;
-    margin-right: 25px;
-    text-align: center;
     vertical-align: top;
-    width: 320px;
+    padding: 0 20px;
+    text-align: right;
+    padding-right: 10%;
+    color: #ccc;
 }
-.textContactBox{
+#contactForm > * {
+    max-width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    min-width: 100%;
+}
+#contactForm > button {
+    transform: scale(1);
+    transition: transform 200ms;
+}
+#contactForm > button:hover {
+    transform: scale(1.1);
+}
+#contactForm > button[type="submit"] {
+    min-width: auto;
+    padding: 10px 30px;
+    background-color: rgb(255, 52, 52);
     color: white;
+    border: none;
+}
+.contactLinks {
+    width: calc(50% - 1em);
+    vertical-align: top;
+    display: inline-block;
+}
+.leftLinks,
+.rightLinks {
+    display: inline-block;
+    width: calc((100% - 1em) / 2);
+    padding: 0 10px;
+}
+.contactLink {
+    border: 2px solid white;
+    display: inline-block;
     position: relative;
-    margin-top: 0px;
-    display: block;
-    font-size: 35px;
-    text-align: center;
-    padding-top: 5px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    width: 100%;
+    border-radius: 10px;
+    line-height: 60px;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 0;
+    transform: scale(1);
+    transition: 750ms background, 250ms border-color, 500ms box-shadow, 250ms transform;
 }
-.textDiscord{
-    font-size: 25px;
+.contactLink:hover {
+    color: white !important;
+    /* border-color: white!important; */
+    transform: scale(1.1);
+    box-shadow: 10px 5px 20px #111;
 }
-.discordTyranix{
-    display: block;
+.contactLink::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    height: 40px;
+    width: 40px;
+    top: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.topMenuLinks:hover{
-    color: yellow;
+.rightLinks > .contactLink::before {
+    left: auto;
+    right: 8px;
 }
+/* youtube */
+.contactLink.youtube {
+    border-color: red;
+    color: red;
+}
+.contactLink.youtube:hover {
+    background-color: red;
+}
+.contactLink.youtube::before {
+    background-image: url(/images/icons/youtube_color.png);
+}
+.contactLink.youtube:hover::before {
+    background-image: url(/images/icons/youtube.png);
+}
+/* twitch */
+.contactLink.twitch {
+    border-color: purple;
+    color: purple;
+}
+.contactLink.twitch:hover {
+    background-color: purple;
+}
+.contactLink.twitch::before {
+    background-image: url(/images/icons/twitch_color.png);
+}
+.contactLink.twitch:hover::before {
+    background-image: url(/images/icons/twitch.png);
+}
+/* twitter */
+.contactLink.twitter {
+    border-color: #0086ee;
+    color: #0086ee;
+}
+.contactLink.twitter:hover {
+    background-color: #0086ee;
+}
+.contactLink.twitter::before {
+    background-image: url(/images/icons/twitter_color.png);
+}
+.contactLink.twitter:hover::before {
+    background-image: url(/images/icons/twitter.png);
+}
+/* insta */
+.contactLink.instagram {
+    border-color: #ff673a;
+    color: #ff673a;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+}
+.contactLink.instagram:hover {
+    background-image: var(--instagram-gradient);
+}
+.contactLink.instagram::before {
+    background-image: url(/images/icons/instagram_color.png);
+}
+.contactLink.instagram:hover::before {
+    background-image: url(/images/icons/instagram.png);
+}
+/* email */
+.contactLink.email {
+    border-color: #12d608;
+    color: #12d608;
+    width: calc(100% - 1em);
+}
+.contactLink.email:hover {
+    background-color: #12d608;
+}
+.contactLink.email::before {
+    background-image: url(/images/icons/email_color.png);
+}
+.contactLink.email:hover::before {
+    background-image: url(/images/icons/email.png);
+}
+/* .contactLink.youtube::before{
+    content: "⯈";
+    font-size: 50px;
+    top: -2px;
+} */
