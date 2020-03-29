@@ -1,3 +1,6 @@
+.streamPageContainer {
+    padding: 20px;
+}
 .streamTwitchPlayer{
     width: 100%;
     height: 100%;
@@ -16,9 +19,6 @@
     width: 30%;
     display: inline-block;
     padding-left: 10px;
-}
-.topMenuLinks:hover{
-    color: yellow;
 }
 @media only screen and (max-width: 750px) {
     .streamLeftSection{

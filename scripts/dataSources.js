@@ -17,7 +17,8 @@ function DataSources() {
                     key: "AIzaSyBE0Z6KyM_EKvPrOYvO5ZhNnZUYQaTgJsU",
                     channelId: "UCNOddurlcb_LQ_eag1mgVSg",
                     part: "snippet,id",
-                    order: "date"
+                    order: "date",
+                    maxResults: 50
                 }
             }
         );
