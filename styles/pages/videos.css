@@ -15,4 +15,6 @@ h1 {
     height: var(--video-height);
     margin: 20px;
     display: inline-block;
+    background-color: #444;
+    border: none;
 }

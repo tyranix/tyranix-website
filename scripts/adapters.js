@@ -1,10 +1,11 @@
 function Adapters(){
     this.youtubeVideo = function(container, data){
+        if (!data || !data.id) return;
         // var elem = container.addElement("div", {class: "youtubeVideoAdapter", 'data-videoId': data.id});
         if(data.id){
             var iframe = container.addElement('iframe', {class: 'videoFrame', src: `https://www.youtube.com/embed/${data.id}`, allowfullscreen: true});
         }else{
-            var iframe = conatainer.addElement('iframe', {class: 'videoFrame'});            
+            var iframe = container.addElement('iframe', {class: 'videoFrame'});            
         }
         // var thumbnail = elem.addElement("div", {class: "videoThumbnail", style: `background-image: url(${data.thumbnails.default.url})`});
         // var sideSection = elem.addElement("div", {class: 'videoSideSection'});

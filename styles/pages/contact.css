@@ -59,9 +59,14 @@
     color: white;
     font-size: 30px;
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 0 0;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
     transform: scale(1);
     transition: 750ms background, 250ms border-color, 500ms box-shadow, 250ms transform;
+    padding-left: 40px;
+}
+.rightLinks > .contactLink{
+    padding-left: auto;
+    padding-right: 40px;
 }
 .contactLink:hover {
     color: white !important;
@@ -82,7 +87,7 @@
 }
 .rightLinks > .contactLink::before {
     left: auto;
-    right: 8px;
+    right: 10px;
 }
 /* youtube */
 .contactLink.youtube {
@@ -161,3 +166,34 @@
     font-size: 50px;
     top: -2px;
 } */
+@media only screen and (max-width: 1300px) {
+    #contactForm{
+        width: 35%;
+        padding-right: 20px;
+    }
+    .contactLinks {
+        width: calc(65% - 1em);
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .contactLink {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    #contactForm{
+        width: 100%;
+    }
+    .contactLinks{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 450px){
+    .leftLinks, .rightLinks{
+        width: 100%;
+    }
+    .rightLinks > .contactLink::before {
+        left: 10px;
+        right: auto;
+    }
+}
