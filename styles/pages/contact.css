@@ -37,6 +37,9 @@
     color: white;
     border: none;
 }
+#contactMessage {
+    min-height: 150px;
+}
 .contactLinks {
     width: calc(50% - 1em);
     vertical-align: top;
