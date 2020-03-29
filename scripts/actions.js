@@ -78,7 +78,10 @@ function Actions(){
             document.body.classList.remove("menu-open");
         });
         rightMenu.addEventListener("click", evt => {
-            evt.stopPropagation();
+            console.log(evt.target.nodeName == "A")
+            if(evt.target.nodeName != "A"){
+                evt.stopPropagation();
+            }
         });
     };
     this.onWebsocketConnection = function () {
