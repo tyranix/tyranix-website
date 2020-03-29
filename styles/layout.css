@@ -57,27 +57,37 @@ header a {
 #menuToggler {
     vertical-align: top;
     display: inline-block;
-    line-height: var(--top-menu-height);
-    min-height: 0;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    height: calc(var(--top-menu-height) - var(--red-margins-width));
+    width: var(--top-menu-height);
     padding: 0;
     background: none;
+    background-image: url(/images/burger_menu.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     border: none;
-    font-size: calc(var(--top-menu-height) / 2);
-    color: white;
-    transform: scale(1);
+    transform: scale(1), rotate(0deg);
     transition: 200ms transform;
 }
-#menuToggler::after {
-    /*je ferais ça plus tard... */
+body.menu-open #menuToggler{
+    transform: rotate(90deg);
+}
+/* body.menu-open #menuToggler:hover{
+    transform: scale(1.1), rotate(90deg) ;
+} */
+#menuToggler:hover {
+    transform: scale(1.1);
+}
+/* #menuToggler::after {
+    /*je ferais ça plus tard... * /
     content: "M";
 }
 body.menu-open #menuToggler::after {
     content: "X";
-}
-#menuToggler:hover {
-    transform: scale(1.1);
-}
-
+} */
 menu {
     color: white;
     width: var(--menu-width);
