@@ -1,20 +1,30 @@
 .streamTwitchPlayer{
-    height: 619px;
     width: 100%;
+    height: 100%;
 }
 .streamTwitchTchat{
     width: 100%;
-    height: 619px;
+    height: 100%;
 }
 .streamLeftSection{
-    width: calc(100% - 400px - 1em);
+    min-height: var(--page-content-height);
+    width: calc(70% - 1em);
     display: inline-block;
 }
 .streamRightSection{
-    width: 400px;
+    min-height: var(--page-content-height);
+    width: 30%;
     display: inline-block;
-    padding-left: 50px;
+    padding-left: 10px;
 }
 .topMenuLinks:hover{
     color: yellow;
+}
+@media only screen and (max-width: 750px) {
+    .streamLeftSection{
+        width: 100%;
+    }
+    .streamRightSection{
+        width: 100%;
+    }
 }

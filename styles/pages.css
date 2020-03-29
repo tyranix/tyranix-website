@@ -6,6 +6,7 @@
     text-align: center;
 }
 .pageContainer {
-    width: 80%;
+    max-width: 1250px;
     display: inline-block;
+    width: 100%;
 }
