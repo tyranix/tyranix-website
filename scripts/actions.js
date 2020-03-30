@@ -67,7 +67,19 @@ function Actions(){
     //other actions
     //-------------------------------------------------------------------------------------
     this.onBeforeBoot = function () {
-
+        if(!document.location.href.includes("http:")){
+            return;
+        }
+        const httpsWhitlelist = ["localhost", "127.0.0.1"];
+        var isWhitelistedUrl = httpsWhitlelist.reduce((previous = false, val)=>{
+            if(previous || window.location.href.includes(val)){
+                return true;
+            }
+        });
+        if(!isWhitelistedUrl){
+            console.log("insecure connection detected, redirecting to https");
+            document.location.href.replace("http:", "https:");
+        }
     };
     this.onAfterBoot = function () {
         menuToggler.addEventListener("click", evt => {
