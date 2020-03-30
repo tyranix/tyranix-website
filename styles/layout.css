@@ -195,7 +195,7 @@ footer {
         border-right: var(--red-margins-width) solid red;
     }
 }
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 750px) {
     :root {
         --top-menu-height: 50px;
         --menu-item-height: 40px;
