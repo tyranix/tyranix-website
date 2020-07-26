@@ -5,7 +5,7 @@ var config = {
     pagesCSSLocation:"/styles/pages",
     apiLocation: "https://",
     websocketLocation: false, //`ws://${location.host}/websocket`,
-    landingPage: "welcome",
+    landingPage: "stream",
     viewsExtension: ".html",
     preloadAllViews: false,
     preloadAllCSS: false,
