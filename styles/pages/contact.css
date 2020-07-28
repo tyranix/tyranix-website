@@ -64,7 +64,7 @@
     background-color: rgba(0, 0, 0, 0);
     box-shadow: 0 0 0 rgba(0,0,0,0);
     transform: scale(1);
-    transition: 750ms background, 250ms border-color, 500ms box-shadow, 250ms transform;
+    transition: 750ms background, 250ms border-color, 500ms box-shadow, 250ms transform, 500ms color;
     padding-left: 40px;
 }
 .rightLinks > .contactLink{

@@ -1,13 +1,10 @@
 .streamPageContainer {
     padding: 20px;
 }
-.streamTwitchPlayer{
+.streamTwitchPlayer, .streamTwitchTchat{
     width: 100%;
     height: 100%;
-}
-.streamTwitchTchat{
-    width: 100%;
-    height: 100%;
+    background-color: #666;
 }
 .streamLeftSection{
     min-height: var(--page-content-height);
