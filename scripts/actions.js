@@ -67,18 +67,23 @@ function Actions(){
     //other actions
     //-------------------------------------------------------------------------------------
     this.onBeforeBoot = function () {
-        if(!document.location.href.includes("http:")){
+        //HTTPS check
+        if(window.isSecureContext){
             return;
         }
+		console.warn("insecure connection detected");
         const httpsWhitlelist = ["localhost", "127.0.0.1"];
-        var isWhitelistedUrl = httpsWhitlelist.reduce((previous = false, val)=>{
-            if(previous || window.location.href.includes(val)){
-                return true;
-            }
-        });
+		var isWhitelistedUrl = false;
+		httpsWhitlelist.forEach(val=>{
+			isWhitelistedUrl = (isWhitelistedUrl || window.location.href.includes(val));
+		});
         if(!isWhitelistedUrl){
-            console.log("insecure connection detected, redirecting to https");
-            document.location.href.replace("http:", "https:");
+            console.warn("redirecting to https");
+			if(window.location.href.includes("http:")){
+				window.location = window.location.href.replace("http:", "https:");
+			}else{
+				window.location = `https://${document.location.href}`;
+			}
         }
     };
     this.onAfterBoot = function () {
