@@ -194,6 +194,9 @@ footer {
     menu {
         border-right: var(--red-margins-width) solid red;
     }
+    #twitchLoginBtn {
+        font-size: 10vw;
+    }
 }
 @media only screen and (max-height: 750px) {
     :root {
@@ -203,7 +206,6 @@ footer {
         --red-margins-width: 2px
     }
     #twitchLoginBtn {
-        font-size: 10vw;
         position: unset;
     }
     footer{
