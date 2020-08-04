@@ -113,6 +113,8 @@
     
     max-height: 100px;
     max-width: 100px;
+
+    cursor: pointer;
 }
 
 @keyframes toyooo{
@@ -162,6 +164,8 @@
     
     max-height: 150px;
     max-width: 150px;
+
+    cursor: pointer;
 }
 
 .textAcceuil{

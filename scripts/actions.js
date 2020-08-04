@@ -8,7 +8,24 @@ function Actions(){
     //page actions on load
     //-------------------------------------------------------------------------------------
     this.onPageLoad = {};
-    this.onPageLoad.welcome = function(){};
+    this.onPageLoad.welcome = function(){
+        //mario go boooom
+        marioQuality.addEventListener("click", blowUpMario);
+        toyooo.addEventListener("click", blowUpMario);
+        function blowUpMario(){
+            marioQuality.addEventListener("load", explosionImageLoaded);
+            toyooo.addEventListener("load", explosionImageLoaded);
+            var srcSring = `/images/explosion.gif?cache=${Math.random()}`;
+            marioQuality.src = srcSring;
+            toyooo.src = srcSring;
+            function explosionImageLoaded(evt){
+                setTimeout(() => {
+                    this.classList.add("none");
+                    this.removeEventListener("load", explosionImageLoaded);
+                }, 800);
+            }
+        }
+    };
     this.onPageLoad.contact = function(){
         //images preloader
         var imagesToPreload = ["youtube.png", "twitch.png", "twitter.png", "instagram.png", "email.png"];
